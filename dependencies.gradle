@@ -1,0 +1,34 @@
+ext{
+    //Android
+    androidBuildToolsVersion = "30.0.2"
+    androidMinSdkVersion = 21
+    androidTargetSdkVersion = 29
+    androidCompileSdkVersion = 29
+
+    //Libraries
+    coreKtxVersion = "1.1.0"
+    appcompatVersion = "1.2.0"
+    constraintlayoutVersion = "2.0.4"
+    junitVersion = "4.12"
+    junitTestVersion = "1.1.1"
+    espressoCoreVersion = "3.3.0"
+
+    //基础库依赖
+    coreDependencies = [
+
+    ]
+
+    //组件模块依赖
+    appDependencies = [
+        coreKtx : "androidx.core:core-ktx:${coreKtxVersion}",
+        appcompat : "androidx.appcompat:appcompat:${appcompatVersion}",
+        constraintlayout : "androidx.constraintlayout:constraintlayout:${constraintlayoutVersion}"
+    ]
+
+    //测试依赖
+    testDependencies = [
+            junit : "junit:junit:${junitVersion}",
+            junitTest : "androidx.test.ext:junit:${junitTestVersion}",
+            espressoCore : "androidx.test.espresso:espresso-core:${espressoCoreVersion}"
+    ]
+}
