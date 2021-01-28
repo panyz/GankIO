@@ -16,13 +16,17 @@ ext{
     okHttpLoggerVersion = "4.9.0"
     retrofitRxJavaAdapterVersion = "1.0.0"
     gsonConverterVersion = "2.9.0"
+    rxJavaVersion = "2.1.1"
+    rxAndroidVersion = "2.0.1"
 
     //基础库依赖
     coreDependencies = [
             retrofit : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
             okHttpLogger : "com.squareup.okhttp3:logging-interceptor:${okHttpLoggerVersion}",
             retrofitRxJavaAdapter : "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${retrofitRxJavaAdapterVersion}",
-            gsonConverter : "com.squareup.retrofit2:converter-gson:${gsonConverterVersion}"
+            gsonConverter : "com.squareup.retrofit2:converter-gson:${gsonConverterVersion}",
+            rxJava : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            rxAndroid : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}"
     ]
 
     //组件模块依赖

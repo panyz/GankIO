@@ -38,7 +38,9 @@ dependencies {
     implementation appLib.coreKtx
     implementation appLib.appcompat
 
-    implementation coreLib.retrofit
+    api coreLib.retrofit
+    api coreLib.rxJava
+    api coreLib.rxAndroid
     implementation coreLib.okHttpLogger
     implementation coreLib.retrofitRxJavaAdapter
     implementation coreLib.gsonConverter

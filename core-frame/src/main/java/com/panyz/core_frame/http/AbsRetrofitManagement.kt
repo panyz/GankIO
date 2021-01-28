@@ -22,7 +22,8 @@ open class AbsRetrofitManagement {
     //自定义拦截器
     private val interceptorList = mutableListOf<Interceptor>()
 
-    fun getRetrofit(host: String): Retrofit {
+
+     open fun getRetrofit(host: String): Retrofit {
         val builder = OkHttpClient.Builder()
             .readTimeout(READ_TIME_OUT, TimeUnit.MILLISECONDS)
             .connectTimeout(CONNECT_TIME_OUT, TimeUnit.MILLISECONDS)

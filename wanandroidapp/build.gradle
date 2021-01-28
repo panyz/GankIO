@@ -1,4 +1,10 @@
-apply plugin: 'com.android.library'
+if (isDebug.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+
+
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
@@ -26,9 +32,24 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets{
+        main {
+            if (isDebug.toBoolean()) {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+                java{
+                    exclude( 'debug/**')
+                }
+            }
+        }
+    }
 }
 
 dependencies {
+    implementation project(path: ':core-frame')
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     def appLib = rootProject.ext.appDependencies
     def testLib = rootProject.ext.testDependencies
     def coreLib = rootProject.ext.coreDependencies

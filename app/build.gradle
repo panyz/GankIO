@@ -30,6 +30,12 @@ android {
 
 dependencies {
 
+    implementation project(path: ':core-frame')
+
+    if (!isDebug.toBoolean()) {
+        implementation project(path: ':wanandroidapp')
+    }
+
     def appLib = rootProject.ext.appDependencies
     def testLib = rootProject.ext.testDependencies
 
