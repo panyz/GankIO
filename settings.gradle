@@ -1,0 +1,3 @@
+include ':core-frame'
+include ':app'
+rootProject.name = "GankIO"
