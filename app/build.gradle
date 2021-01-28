@@ -6,6 +6,10 @@ android {
     compileSdkVersion rootProject.ext.androidCompileSdkVersion
     buildToolsVersion rootProject.ext.androidBuildToolsVersion
 
+    viewBinding {
+        enabled = true
+    }
+
     defaultConfig {
         applicationId "com.panyz.gankio"
         minSdkVersion rootProject.ext.androidMinSdkVersion

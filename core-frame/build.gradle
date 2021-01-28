@@ -6,6 +6,10 @@ android {
     compileSdkVersion rootProject.ext.androidCompileSdkVersion
     buildToolsVersion rootProject.ext.androidBuildToolsVersion
 
+    viewBinding {
+        enabled = true
+    }
+
     defaultConfig {
         minSdkVersion rootProject.ext.androidMinSdkVersion
         targetSdkVersion rootProject.ext.androidTargetSdkVersion
@@ -27,11 +31,18 @@ android {
 dependencies {
     def appLib = rootProject.ext.appDependencies
     def testLib = rootProject.ext.testDependencies
+    def coreLib = rootProject.ext.coreDependencies
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation appLib.coreKtx
     implementation appLib.appcompat
+
+    implementation coreLib.retrofit
+    implementation coreLib.okHttpLogger
+    implementation coreLib.retrofitRxJavaAdapter
+    implementation coreLib.gsonConverter
+
     testImplementation testLib.junit
     androidTestImplementation testLib.junitTest
     androidTestImplementation testLib.espressoCore
