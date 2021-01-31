@@ -1,4 +1,4 @@
-ext{
+ext {
     //Android
     androidBuildToolsVersion = "30.0.2"
     androidMinSdkVersion = 21
@@ -18,28 +18,32 @@ ext{
     gsonConverterVersion = "2.9.0"
     rxJavaVersion = "2.1.1"
     rxAndroidVersion = "2.0.1"
+    arouterApiVersion = "1.5.1"
+    arouterCompilerVersion = "1.5.1"
 
     //基础库依赖
     coreDependencies = [
-            retrofit : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
-            okHttpLogger : "com.squareup.okhttp3:logging-interceptor:${okHttpLoggerVersion}",
-            retrofitRxJavaAdapter : "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${retrofitRxJavaAdapterVersion}",
-            gsonConverter : "com.squareup.retrofit2:converter-gson:${gsonConverterVersion}",
-            rxJava : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
-            rxAndroid : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}"
+            retrofit             : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            okHttpLogger         : "com.squareup.okhttp3:logging-interceptor:${okHttpLoggerVersion}",
+            retrofitRxJavaAdapter: "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${retrofitRxJavaAdapterVersion}",
+            gsonConverter        : "com.squareup.retrofit2:converter-gson:${gsonConverterVersion}",
+            rxJava               : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            rxAndroid            : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            arouterApi           : "com.alibaba:arouter-api:${arouterApiVersion}"
     ]
 
     //组件模块依赖
     appDependencies = [
-        coreKtx : "androidx.core:core-ktx:${coreKtxVersion}",
-        appcompat : "androidx.appcompat:appcompat:${appcompatVersion}",
-        constraintlayout : "androidx.constraintlayout:constraintlayout:${constraintlayoutVersion}"
+            coreKtx         : "androidx.core:core-ktx:${coreKtxVersion}",
+            appcompat       : "androidx.appcompat:appcompat:${appcompatVersion}",
+            constraintlayout: "androidx.constraintlayout:constraintlayout:${constraintlayoutVersion}",
+            arouterCompiler : "com.alibaba:arouter-compiler:${arouterCompilerVersion}"
     ]
 
     //测试依赖
     testDependencies = [
-            junit : "junit:junit:${junitVersion}",
-            junitTest : "androidx.test.ext:junit:${junitTestVersion}",
-            espressoCore : "androidx.test.espresso:espresso-core:${espressoCoreVersion}"
+            junit       : "junit:junit:${junitVersion}",
+            junitTest   : "androidx.test.ext:junit:${junitTestVersion}",
+            espressoCore: "androidx.test.espresso:espresso-core:${espressoCoreVersion}"
     ]
 }
