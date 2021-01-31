@@ -49,6 +49,7 @@ dependencies {
     api coreLib.rxJava
     api coreLib.rxAndroid
     api coreLib.arouterApi
+    api coreLib.qmui
     implementation coreLib.okHttpLogger
     implementation coreLib.retrofitRxJavaAdapter
     implementation coreLib.gsonConverter

@@ -20,6 +20,7 @@ ext {
     rxAndroidVersion = "2.0.1"
     arouterApiVersion = "1.5.1"
     arouterCompilerVersion = "1.5.1"
+    qmuiVersion = "2.0.0-alpha10"
 
     //基础库依赖
     coreDependencies = [
@@ -29,7 +30,8 @@ ext {
             gsonConverter        : "com.squareup.retrofit2:converter-gson:${gsonConverterVersion}",
             rxJava               : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
             rxAndroid            : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
-            arouterApi           : "com.alibaba:arouter-api:${arouterApiVersion}"
+            arouterApi           : "com.alibaba:arouter-api:${arouterApiVersion}",
+            qmui                 : "com.qmuiteam:qmui:${qmuiVersion}"
     ]
 
     //组件模块依赖
