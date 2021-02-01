@@ -56,7 +56,6 @@ android {
 
 dependencies {
     implementation project(path: ':core-frame')
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     def appLib = rootProject.ext.appDependencies
     def testLib = rootProject.ext.testDependencies
     def coreLib = rootProject.ext.coreDependencies
@@ -66,6 +65,7 @@ dependencies {
     implementation appLib.coreKtx
     implementation appLib.appcompat
     implementation appLib.arouterCompiler
+    implementation appLib.constraintlayout
     testImplementation testLib.junit
     androidTestImplementation testLib.junitTest
     androidTestImplementation testLib.espressoCore

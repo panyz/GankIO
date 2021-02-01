@@ -21,6 +21,7 @@ ext {
     arouterApiVersion = "1.5.1"
     arouterCompilerVersion = "1.5.1"
     qmuiVersion = "2.0.0-alpha10"
+    constraintlayoutVersion = "2.0.4"
 
     //基础库依赖
     coreDependencies = [
@@ -39,7 +40,8 @@ ext {
             coreKtx         : "androidx.core:core-ktx:${coreKtxVersion}",
             appcompat       : "androidx.appcompat:appcompat:${appcompatVersion}",
             constraintlayout: "androidx.constraintlayout:constraintlayout:${constraintlayoutVersion}",
-            arouterCompiler : "com.alibaba:arouter-compiler:${arouterCompilerVersion}"
+            arouterCompiler : "com.alibaba:arouter-compiler:${arouterCompilerVersion}",
+            constraintlayout:"androidx.constraintlayout:constraintlayout:${constraintlayoutVersion}"
     ]
 
     //测试依赖
