@@ -36,6 +36,7 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def appLib = rootProject.ext.appDependencies
     def testLib = rootProject.ext.testDependencies
     def coreLib = rootProject.ext.coreDependencies
@@ -44,6 +45,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation appLib.coreKtx
     implementation appLib.appcompat
+    implementation appLib.fragmentKtx
 
     api coreLib.retrofit
     api coreLib.rxJava

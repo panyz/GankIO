@@ -53,6 +53,7 @@ dependencies {
     implementation appLib.appcompat
     implementation appLib.constraintlayout
     implementation appLib.arouterCompiler
+    implementation appLib.fragmentKtx
     testImplementation testLib.junit
     androidTestImplementation testLib.junitTest
     androidTestImplementation testLib.espressoCore

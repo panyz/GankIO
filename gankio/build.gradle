@@ -47,6 +47,7 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def appLib = rootProject.ext.appDependencies
     def testLib = rootProject.ext.testDependencies
     implementation project(path: ':core-frame')
@@ -56,6 +57,7 @@ dependencies {
     implementation appLib.appcompat
     implementation appLib.arouterCompiler
     implementation appLib.constraintlayout
+    implementation appLib.fragmentKtx
     testImplementation testLib.junit
     androidTestImplementation testLib.junitTest
     androidTestImplementation testLib.espressoCore
