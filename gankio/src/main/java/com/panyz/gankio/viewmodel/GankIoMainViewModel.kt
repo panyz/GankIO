@@ -2,24 +2,24 @@ package com.panyz.gankio.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import com.panyz.core_frame.base.BaseViewModel
+import com.panyz.core_frame.http.ILoadingCallBack
+import com.panyz.core_frame.http.IRequestCallBack
 import com.panyz.gankio.datas.response.Banners
 import com.panyz.gankio.datasource.GankIoMainDataSource
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 
-class GankIoMainViewModel : BaseViewModel() {
+class GankIoMainViewModel(loadingCallBack: ILoadingCallBack?) : BaseViewModel() {
 
-    private var dataSource: GankIoMainDataSource = GankIoMainDataSource()
+    private var dataSource: GankIoMainDataSource = GankIoMainDataSource(loadingCallBack)
 
     val bannersData = MutableLiveData<List<Banners>>()
 
     fun getBanners() {
-        val banners = dataSource.getBanners()
-        val subscribe =
-            banners.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
-                .subscribe {
-                    bannersData.value = it.data
-                }
+      dataSource.getBanners(object : IRequestCallBack<List<Banners>>{
+          override fun onSuccess(data: List<Banners>) {
+              bannersData.value = data
+          }
+      })
+
     }
 
 }
