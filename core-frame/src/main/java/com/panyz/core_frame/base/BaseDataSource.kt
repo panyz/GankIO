@@ -2,8 +2,8 @@ package com.panyz.core_frame.base
 
 import android.annotation.SuppressLint
 import com.panyz.core_frame.http.HttpResponse
-import com.panyz.core_frame.http.ILoadingCallBack
-import com.panyz.core_frame.http.IRequestCallBack
+import com.panyz.core_frame.http.callback.ILoadingCallBack
+import com.panyz.core_frame.http.callback.IRequestCallBack
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -20,6 +20,9 @@ open class BaseDataSource(private var loading: ILoadingCallBack?) {
             }
             .doFinally {
                 loading?.stopLoading()
+            }
+            .doOnError {
+
             }
             .subscribe {
                 callBack.onSuccess(it.data)

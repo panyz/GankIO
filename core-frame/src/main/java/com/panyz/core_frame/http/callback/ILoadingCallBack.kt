@@ -1,4 +1,4 @@
-package com.panyz.core_frame.http
+package com.panyz.core_frame.http.callback
 
 interface ILoadingCallBack {
     fun startLoading()

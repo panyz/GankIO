@@ -1,7 +1,7 @@
 package com.panyz.core_frame.http
 
-import androidx.viewbinding.BuildConfig
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
+import com.panyz.core_frame.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

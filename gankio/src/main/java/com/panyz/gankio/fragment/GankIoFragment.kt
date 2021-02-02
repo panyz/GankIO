@@ -8,13 +8,14 @@ import com.panyz.gankio.viewmodel.GankIoMainViewModel
 
 class GankIoFragment : BaseFragment() {
 
-    private val viewModel:GankIoMainViewModel = GankIoMainViewModel(loadingCallBack)
+    private lateinit var viewModel : GankIoMainViewModel
 
     override fun getContentView(): Int {
         return R.layout.fragment_gank_io
     }
 
     override fun initViewModel() {
+        viewModel = GankIoMainViewModel(loadingCallBack)
         viewModel.bannersData.observe(this, Observer {
             println(it)
         })
@@ -23,7 +24,6 @@ class GankIoFragment : BaseFragment() {
     override fun loadData() {
         viewModel.getBanners()
     }
-
 
 
 }

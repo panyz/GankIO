@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.RelativeLayout
 import androidx.fragment.app.Fragment
 import com.panyz.core_frame.R
-import com.panyz.core_frame.http.ILoadingCallBack
+import com.panyz.core_frame.http.callback.ILoadingCallBack
 import kotlinx.android.synthetic.main.fragment_base.*
 
 abstract class BaseFragment : Fragment() {
