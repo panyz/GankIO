@@ -2,6 +2,7 @@ package com.panyz.core_frame.http
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import com.panyz.core_frame.BuildConfig
+import com.panyz.core_frame.http.interceptor.HttpInterceptor
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -33,6 +34,8 @@ open class AbsRetrofitManagement {
                 builder.addInterceptor(interceptor)
             }
         }
+
+         builder.addInterceptor(HttpInterceptor())
 
         if (BuildConfig.DEBUG) {
             val loggingInterceptor = HttpLoggingInterceptor()
