@@ -7,7 +7,7 @@ import retrofit2.http.GET
 
 interface HttpApi {
 
-    @GET("banners")
+    @GET("bannerss")
     open fun getBanners(): Observable<HttpResponse<List<Banners>>>
 
 
