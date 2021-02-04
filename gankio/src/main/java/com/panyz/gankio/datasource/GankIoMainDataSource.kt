@@ -9,7 +9,7 @@ import com.panyz.gankio.http.RetrofitManagement
 
 class GankIoMainDataSource(loadingCallBack: ILoadingCallBack?) :BaseDataSource(loadingCallBack) {
 
-    var service: HttpApi = RetrofitManagement.instance.getService()
+    private val service: HttpApi = RetrofitManagement.instance.getService()
 
     fun getBanners(callBack: IRequestCallBack<List<Banners>>)  {
         execute(service.getBanners(),callBack)
